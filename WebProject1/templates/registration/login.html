@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<h1>Azure Storage Web Explorer for Static Web Hosting</h1>
+
+<!-- <section class="common-form">-->
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-auto">
+			{% if form.errors %}
+			<p class="alert alert-danger">Your username and password didn't match. Please try again.</p>
+			{% endif %}
+			{% if next %}
+			{% if user.is_authenticated %}
+			<p class="alert-danger">
+				Your account doesn't have access to this page. To proceed,
+				please login with an account that has access.
+			</p>
+			{% else %}
+			<p class="alert-danger">Please login to see this page.</p>
+			{% endif %}
+			{% endif %}
+
+			<form method="post" action="{% url 'login' %}">
+				{% csrf_token %}
+				<table>
+					<tr>
+						<td>{{ form.username.label_tag}}</td>
+						<td>{{ form.username}}</td>
+					</tr>
+					<tr>
+						<td>{{ form.password.label_tag}}</td>
+						<td>{{ form.password}}</td>
+					</tr>
+				</table>
+				<button type="submit" class="btn btn-info">Login</button>
+				<input type="hidden" name="next" value="{{ next }}" />
+			</form>
+		</div>
+	</div>
+</div>
+<!-- </section>-->
+{% endblock %}

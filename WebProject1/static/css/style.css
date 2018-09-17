@@ -1,0 +1,149 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Open Sans', sans-serif;
+}
+
+/**
+ * index
+ */
+.user-name {
+	margin-bottom: 24px;
+	color: #993333;
+}
+
+.post-list ul {
+	width: 100%;
+}
+
+	.post-list ul li {
+		margin-bottom: 8px;
+		padding-bottom: 8px;
+		border-bottom: 1px dotted #cccccc;
+	}
+
+.post-list, .pagination {
+}
+
+	.pagination ul {
+		width: 100%;
+		display: table;
+	}
+
+	.pagination li {
+		display: table-cell;
+		width: 50%;
+	}
+
+		.pagination li:last-child {
+			text-align: right;
+		}
+
+/**
+ * detail
+ */
+.post-text {
+	margin-bottom: 8px;
+	padding-bottom: 8px;
+	border-bottom: 1px dotted #cccccc;
+}
+
+.post-date {
+	margin-bottom: 8px;
+	padding-bottom: 8px;
+	border-bottom: 1px dotted #cccccc;
+}
+
+	.post-date span {
+		padding: 0 16px;
+	}
+
+.post-edit {
+	margin-bottom: 8px;
+	padding-bottom: 8px;
+	border-bottom: 1px dotted #cccccc;
+}
+
+	.post-edit a:first-child {
+		margin-right: 24px;
+	}
+
+/**
+ * Create, Update
+ */
+.common-form label {
+	display: block;
+}
+
+.common-form p {
+	margin-bottom: 8px;
+}
+
+.common-form input, .common-form textarea {
+	padding: 4px;
+	width: 100%;
+	margin-bottom: 8px;
+}
+
+.common-form select {
+	padding: 4px;
+	margin-bottom: 8px;
+}
+
+.common-form .submit {
+	margin-top: 8px;
+	margin-bottom: 8px;
+	padding: 8px 36px;
+	border: none;
+	color: #ffffff;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	background-color: #4CAF50;
+	border-radius: 2px;
+}
+
+.common-form .delete {
+	background-color: #f44336;
+}
+
+/**
+	login
+*/
+
+form {
+	background: #f0f0f0;
+	padding: 6% 4%;
+}
+.login input[type="submit"] {
+	background: #28d;
+	border-color: transparent;
+	color: #fff;
+	cursor: pointer;
+}
+
+	.login input[type="submit"]:hover {
+		background: #17c;
+	}
+
+
+/* tree view*/
+
+.treeview .list-group-item {
+	cursor: pointer;
+}
+
+.treeview span.indent {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.treeview span.icon {
+	width: 12px;
+	margin-right: 5px;
+}
+
+.treeview .node-disabled {
+	color: silver;
+	cursor: not-allowed;
+}
